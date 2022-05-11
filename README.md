@@ -1,0 +1,1 @@
+# dotnet-maui-barcode-qrcode-reader
