@@ -28,3 +28,6 @@ The sample demonstrates how to implement a [.NET MAUI](https://docs.microsoft.co
     
     
         ![MAUI barcode and QR code reader](https://www.dynamsoft.com/codepool/img/2022/05/maui-barcode-qrcode-reader.png)
+        
+ ## Blog
+ [How to Build a .NET MAUI Barcode and QR Code Reader for Windows and Android](https://www.dynamsoft.com/codepool/dotnet-maui-barcode-qr-code-reader.html)
