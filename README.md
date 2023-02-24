@@ -14,7 +14,7 @@ The sample demonstrates how to implement a [.NET MAUI](https://docs.microsoft.co
 3. Apply for a [30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr) and update following code in `ReaderPage.xaml.cs`:
     
     ```cs
-    _barcodeQRCodeService.InitSDK("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ==");
+    BarcodeReader.InitLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ==", out errorMsg);
     ``` 
 4. Select a framework and build the project.
 
