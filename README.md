@@ -5,7 +5,7 @@ The sample demonstrates how to implement a [.NET MAUI](https://docs.microsoft.co
 - Visual Studio 2022 for Windows
 
 ## Dependencies
-- [BarcodeQRCodeSDK](https://www.nuget.org/packages/BarcodeQRCodeSDK/)
+- [Dynamsoft.DotNet.Barcode](https://www.nuget.org/packages/Dynamsoft.DotNet.Barcode)
 - [Barcode.NET.Mobile](https://www.nuget.org/packages/Barcode.NET.Mobile)
 
 ## How to Use
