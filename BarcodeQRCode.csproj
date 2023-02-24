@@ -44,8 +44,8 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<ItemGroup Condition="$(TargetFramework.Contains('-windows')) == true ">
-	  <PackageReference Include="BarcodeQRCodeSDK" Version="1.2.1" />
+	<ItemGroup>
+	  <PackageReference Include="Dynamsoft.DotNet.Barcode" Version="9.6.10" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1,21 +1,27 @@
 ﻿using Dynamsoft;
+using Dynamsoft.DBR;
 
 namespace BarcodeQRCode.Services
 {
     public partial class BarcodeQRCodeService
     {
-        BarcodeQRCodeReader? reader = null;
+        BarcodeReader? reader = null;
         
         public partial void InitSDK(string license)
         {
-            BarcodeQRCodeReader.InitLicense(license); // Get a license key from https://www.dynamsoft.com/customer/license/trialLicense?product=dbr
+
+            string errorMsg;
+            EnumErrorCode errorCode = BarcodeReader.InitLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ==", out errorMsg); // Get a license key from https://www.dynamsoft.com/customer/license/trialLicense?product=dbr
+
+            if (errorCode != EnumErrorCode.DBR_SUCCESS)
+            {
+                Console.WriteLine(errorMsg);
+            }
 
             try
             {
-                Console.WriteLine("GetVersionInfo(): " + BarcodeQRCodeReader.GetVersionInfo());
-                reader = BarcodeQRCodeReader.Create();
-                // Refer to https://www.dynamsoft.com/barcode-reader/parameters/structure-and-interfaces-of-parameters.html?ver=latest
-                reader.SetParameters("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\", \"BF_ONED\"], \"ExpectedBarcodesCount\":20}}");
+                reader = new BarcodeReader();
+                
             }
             catch (Exception e)
             {
@@ -31,13 +37,18 @@ namespace BarcodeQRCode.Services
             string decodingResult = "";            
             try
             {
-                
-                string[]? results = reader.DecodeFile(filePath);
-                if (results != null)
+
+                TextResult[]? results = reader.DecodeFile(filePath, "");
+                if (results != null && results.Length > 0)
                 {
-                    foreach (string result in results)
+                    int i = 1;
+                    foreach (TextResult result in results)
                     {
-                        decodingResult += result + "\n";
+                        string barcodeFormat = result.BarcodeFormatString;
+                        string message = "Barcode " + i + ": " + barcodeFormat + ", " + result.BarcodeText;
+                        Console.WriteLine(message);
+                        decodingResult += message;
+                        i++;
                     }
                 }
                 else
