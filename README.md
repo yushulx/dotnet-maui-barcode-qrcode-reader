@@ -2,11 +2,11 @@
 The sample demonstrates how to implement a [.NET MAUI](https://docs.microsoft.com/en-us/dotnet/maui/what-is-maui) app, which supports `Windows` and `Android`, to read barcode and QR code from image files using [Dynamsoft Barcode Reader SDK](https://www.dynamsoft.com/barcode-reader/overview/). 
 
 ## Dev Environment
-- Visual Studio 2022 Preview for Windows
+- Visual Studio 2022 for Windows
 
 ## Dependencies
-- [BarcodeQRCodeSDK](https://www.nuget.org/packages/BarcodeQRCodeSDK/) for Windows
-- [Xamarin.Dynamsoft.Barcode.Android](https://www.nuget.org/packages/Xamarin.Dynamsoft.Barcode.Android/) for Android
+- [BarcodeQRCodeSDK](https://www.nuget.org/packages/BarcodeQRCodeSDK/)
+- [Barcode.NET.Mobile](https://www.nuget.org/packages/Barcode.NET.Mobile)
 
 ## How to Use
 1. Clone the repository.
