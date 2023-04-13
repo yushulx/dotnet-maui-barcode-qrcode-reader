@@ -1,3 +1,6 @@
+The project has been moved to https://github.com/yushulx/dotnet-barcode-qr-code-sdk/tree/main/example/maui. 
+
+------------------------------------------------------------------------------------------------------------------
 # .NET MAUI Barcode and QR Code Reader
 The sample demonstrates how to implement a [.NET MAUI](https://docs.microsoft.com/en-us/dotnet/maui/what-is-maui) app, which supports `Windows` and `Android`, to read barcode and QR code from image files using [Dynamsoft Barcode Reader SDK](https://www.dynamsoft.com/barcode-reader/overview/). 
 
